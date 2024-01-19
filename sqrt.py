@@ -1,13 +1,23 @@
-def BabylonianAlgorithm(number):
-    if(number == 0):
-        return 0;
+import math
 
-    g = number/2.0;
-    g2 = g + 1;
-    while(g != g2):
-        n = number/ g;
-        g2 = g;
-        g = (g + n)/2;
+def sqrt(num):
+    guess = 1
+    last = -1
+    while guess<=num:
+        guess+=1
+        guess*=guess
+    root = guess
+    while True:
+        root=(root + num/root)/2
+        if last == root:
+            break
+        else: 
+            last = root
 
-    return g;
-print('The Square root of 0.3 =', BabylonianAlgorithm(0.3));
+    return root
+
+
+number = float(input("input number to sqrt"))
+
+print("my method: " + str(sqrt(number)))
+print("internal function " + str(math.sqrt(number)))
