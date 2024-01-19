@@ -1,6 +1,6 @@
+# update the function body to return the input `string` 
+# with the character at `index` replaced with a dash (-)
 def replace_at_index(string, index):
-    return # update the function to return `word` with all instances of `letter` removed!
-def remove_all_from_string(word, letter):
-	return word[:3] + word[4:]
+	return string[:index] + "-" + string[index + 1:]
         
-remove_all_from_string("python", "n")
+print(replace_at_index("python", 2))
