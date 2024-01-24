@@ -25,6 +25,5 @@ def BabylonianAlgorithm(number):
 
 number = int(input("Enter a number to get its square root: "))
 result = BabylonianAlgorithm(number)
-print(f"\nThe square root with this Babylonian method is: {result}")
+print(f"\nThe square root with this Babylonian method is:             {result}")
 print(f"The square root using the internal function math.sqrt() is: {math.sqrt(number)}")
-print("----------------------------------------------------------------------------------------------------------------------------------------")
