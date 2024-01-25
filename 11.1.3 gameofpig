@@ -1,0 +1,66 @@
+import random
+
+    
+total_score = 0
+round_score = 0
+iterations = 0
+
+computer_round = 0
+computer_total = 0
+computer_turns = 0
+
+def computer_turn():
+    global computer_round
+    global computer_total
+    global computer_turns
+    while True:
+        print("\n")
+        computer_turns+=1
+        random_number = random.randint(1, 6)
+        if random_number == 1:
+            print("The computer rolled a 1. End of turn")
+            return
+        computer_round+=random_number
+        print(f"The computer rolled a {random_number}.")
+        print(f"This round the computer has: {computer_round} points.")
+        if computer_round+computer_total>=100:
+            print(f"Good try! The computer won on {computer_turns} turns.")
+            return False
+        if computer_round >= 15:
+            print("The computer chooses to bank.\n")
+            return
+        else:
+            print("The computer chooses to roll again.")
+            
+            
+        
+        
+while True:
+    iterations += 1
+    random_number = random.randint(1, 6)
+    round_score+=random_number
+    
+    if random_number == 1:
+        print("You rolled a 1! You get a zero for this round!")
+        round_score = 0
+        if computer_turn() == False:
+            break
+        continue
+    
+    print(f"Turn {iterations}")
+    print(f"You rolled a {random_number}.")
+    print(f"This round you have {round_score} points and a total of {total_score + round_score}")
+    
+    if round_score+total_score>= 100:
+        print("This means you have surpassed the 100 point goal!")
+        print(f"Congratulations! You won on {iterations} turns!")
+        break
+    
+    roll_or_bank = input("Would you like to roll or bank? ")
+    
+    if roll_or_bank == "bank":
+        total_score+=round_score
+        round_score = 0
+        if computer_turn() == "False":
+            break
+    print("\n")
