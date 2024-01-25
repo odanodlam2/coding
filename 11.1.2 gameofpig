@@ -1,0 +1,32 @@
+import random
+
+    
+total_score = 0
+round_score = 0
+iterations = 0
+while True:
+    iterations += 1
+    random_number = random.randint(1, 6)
+    round_score+=random_number
+    
+    if random_number == 1:
+        print("You rolled a 1! You get a zero for this round!")
+        round_score = 0
+        continue
+    
+    print(f"Turn {iterations}")
+    print(f"You rolled a {random_number}.")
+    print(f"This round you have {round_score} points and a total of {total_score + round_score}")
+    
+    if round_score+total_score>= 100:
+        print("This means you have surpassed the 100 point goal!")
+        break
+    
+    roll_or_bank = input("Would you like to roll or bank? ")
+    
+    if roll_or_bank == "bank":
+        total_score+=round_score
+        round_score = 0
+    print("\n")
+    
+print(f"Congratulations! You won on {iterations} turns!")
