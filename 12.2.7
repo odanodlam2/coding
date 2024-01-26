@@ -1,0 +1,12 @@
+def greeting(input_str):
+    input_list = input_str.split()
+
+    name = input_list[0]
+    hobby = input_list[2]
+
+    greeting_message = f'Hello, {name}! I also enjoy {hobby}!'
+
+    return greeting_message
+
+print(greeting('Jose 17 hockey'))  
+print(greeting('Cindy 14 robotics'))
