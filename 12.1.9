@@ -1,0 +1,13 @@
+def calculate_score(scores):
+   
+    if not isinstance(scores, tuple) or len(scores) != 3:
+        raise TypeError("Argument must be a tuple of length 3")
+    
+    for score in scores:
+        if not isinstance(score, int) or score < 0 or score > 10:
+            raise ValueError("All elements of the tuple must be integers between 0 and 10")
+    
+    return sum(scores)
+
+print(calculate_score((10, 10, 10)))  
+print(calculate_score((9, 9, 6)))
