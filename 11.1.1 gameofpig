@@ -1,0 +1,7 @@
+round_score and total_score initialized to 0
+loop:
+    get random number
+    if 1 round score becomes 0 continue loop
+    player chooses to total
+    if round+total => 100
+    then break loop
