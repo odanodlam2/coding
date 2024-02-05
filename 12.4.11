@@ -1,0 +1,9 @@
+def remove_sort_reverse(my_list):
+    # perform operations on `my_list` to 
+    # 1. remove all "eggplant"s
+    # 2. sort it
+    # 3. reverse it!
+    my_list = [j for i,j in enumerate(my_list) if j!="eggplant"]
+    my_list.sort()
+    my_list = my_list[::-1]
+    return my_list
