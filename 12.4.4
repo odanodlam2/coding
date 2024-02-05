@@ -1,0 +1,10 @@
+# man i got internal suspension wtf
+times = int(input("Number of names:"))
+names = []
+
+for i in range(times):
+    name = input("Name: ")
+    names.append(name)
+print(f"First name: {names[0]}")
+print(f"Middle names: {str(names[1:-1])}")
+print(f"Last name: {names[-1]}")
