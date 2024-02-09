@@ -8,6 +8,7 @@ def bubblesort(elements):
     return elements
 
 list_random = [random.randint(1,100) for i in range(20)]
+list_ascending = list_random.copy()
 list_ascending = bubblesort(list_random)
 list_descending = list(reversed(list_ascending))
 
