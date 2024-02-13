@@ -1,0 +1,45 @@
+board = [[" " for _ in range(3)] for _ in range(3)]
+
+def print_board(board):
+    for row in board:
+        print(row)
+
+def game_is_over(board):
+    for i in range(3):
+        if board[i][0] == board[i][1] == board[i][2] != " " or \
+           board[0][i] == board[1][i] == board[2][i] != " ":
+            return True
+    if board[0][0] == board[1][1] == board[2][2] != " " or \
+       board[0][2] == board[1][1] == board[2][0] != " ":
+        return True
+    if all(board[row][col] != " " for row in range(3) for col in range(3)):
+        return True
+    return False
+
+def get_valid_index(prompt):
+    while True:
+        try:
+            index = int(input(prompt)) - 1  
+            if index in range(3):
+                return index
+            else:
+                print("Invalid input. Please enter a number between 1 and 3.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+turn = "x"  
+
+while not game_is_over(board):
+    print_board(board)
+    print("It's " + turn + "'s turn.")
+    row = get_valid_index("Row (1-3): ")
+    col = get_valid_index("Col (1-3): ")
+
+    if board[row][col] == " ":
+        board[row][col] = turn
+        turn = "o" if turn == "x" else "x"
+    else:
+        print("That space is already taken. Please choose another.")
+
+print_board(board)
+if game_is_over(board):
+    print("Game over!")
