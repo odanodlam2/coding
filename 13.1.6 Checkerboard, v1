@@ -1,0 +1,10 @@
+grid = [[0 for _ in range(8)] for _ in range(8)]
+for i in range(8):
+    for j in range(8):
+        if i < 3 or i > 4:  
+            grid[i][j] = 1
+def print_board(board):
+    for row in board:
+        print(' '.join(str(cell) for cell in row))
+
+print_board(grid)
