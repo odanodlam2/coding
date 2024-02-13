@@ -1,0 +1,11 @@
+def safe_int(argument):
+    try:
+        return int(argument)
+    except ValueError:
+        return 0
+
+list_of_strings = ["a", "2", "7", "zebra"]
+
+integers_list = [safe_int(x) for x in list_of_strings]
+
+print(integers_list)
