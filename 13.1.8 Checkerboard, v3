@@ -1,0 +1,12 @@
+def print_board(board):
+    for row in board:
+        print(' '.join(str(cell) for cell in row))
+
+board = [[0 for _ in range(8)] for _ in range(8)]
+
+for i in range(8):
+    for j in range(8):
+        if i < 3 or i > 4:
+            board[i][j] = (i + j) % 2
+
+print_board(board)
