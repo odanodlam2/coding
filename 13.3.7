@@ -1,0 +1,15 @@
+# Initialize an empty list to store the coordinate pairs
+coordinate_pairs = []
+
+# Ask the user for five coordinate pairs and store them in a list of tuples
+for _ in range(5):
+    x = int(input("Enter the x-coordinate: "))
+    y = int(input("Enter the y-coordinate: "))
+    coordinate_pairs.append((x, y))
+
+# Print the slope between adjacent coordinate pairs
+for i in range(len(coordinate_pairs) - 1):
+    x1, y1 = coordinate_pairs[i]
+    x2, y2 = coordinate_pairs[i + 1]
+    slope = (y2 - y1) / (x2 - x1)
+    print(f"Slope between {coordinate_pairs[i]} and {coordinate_pairs[i + 1]}: {slope}")
