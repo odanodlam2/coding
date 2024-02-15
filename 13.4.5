@@ -1,0 +1,15 @@
+phone_book = {}
+while True:
+    name = input("Enter a name (Press Enter to exit): " ).strip()
+    
+    
+    if not name:
+        break
+    
+    if name in phone_book:
+        print(f"Phone number for {name}: {phone_book[name]}")
+    else:
+        phone_number = input(f"Enter the phone number for {name}: ").strip()
+        phone_book[name] = phone_number
+print("Final Phone Book:")
+print(phone_book)
