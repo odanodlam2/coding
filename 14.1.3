@@ -1,0 +1,35 @@
+secret_word = "felipe"
+dashes = "-" * len(secret_word)
+
+def update_dashes(secret_word, dashes, guess):
+    result = ""
+    for i in range(len(secret_word)):
+        if secret_word[i] == guess:
+            result += guess
+        else:
+            result += dashes[i]
+    return result
+
+def get_guess():
+    while True:
+        guess = input("Guess: ")
+        if len(guess) != 1:
+            print("Your guess must have exactly one character!")
+        elif not guess.islower():
+            print("Your guess must be a lowercase letter!")
+        else:
+            return guess
+
+for _ in range(10):
+    print(dashes)
+    guess = get_guess()
+    if guess in secret_word:
+        print("That letter is in the word!")
+        dashes = update_dashes(secret_word, dashes, guess)
+    else:
+        print("That letter is not in the word.")
+    if dashes == secret_word:
+        print("Congratulations! You guessed the word:", secret_word)
+        break
+else:
+    print("Sorry, you didn't guess the word. The secret word was:", secret_word)
