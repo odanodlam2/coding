@@ -10,7 +10,7 @@ def get_guess():
         else:
             return guess
 
-for i in range(10): 
+while True:
     guess = get_guess()
     if guess in secret_word:
         print("That letter is in the secret word!")
