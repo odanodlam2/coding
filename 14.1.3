@@ -1,4 +1,4 @@
-secret_word = "cypress"
+secret_word = "eggplant"
 dashes = "-" * len(secret_word)
 
 def update_dashes(secret_word, dashes, guess):
@@ -20,20 +20,11 @@ def get_guess():
         else:
             return guess
 
-incorrect_guesses = 0  # Initialize the count of incorrect guesses
-
-while incorrect_guesses < 10:  # Loop until 10 incorrect guesses are made
+while True:
     print(dashes)
-    print(f"{10-incorrect_guesses} incorect guesses left")
     guess = get_guess()
     if guess in secret_word:
         print("That letter is in the word!")
         dashes = update_dashes(secret_word, dashes, guess)
     else:
         print("That letter is not in the word.")
-        incorrect_guesses += 1  # Increment the count of incorrect guesses
-    if dashes == secret_word:
-        print("Congratulations! You guessed the word:", secret_word)
-        break
-else:
-    print("Sorry, you didn't guess the word. The secret word was:", secret_word)
