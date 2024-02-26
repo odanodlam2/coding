@@ -39,5 +39,5 @@ while guesses_left > 0:
     if dashes == secret_word:
         print("Congratulations! You guessed the word:", secret_word)
         breaK
-        
-print("You lose. The word was:", secret_word)
+    elif guesses_left == 0:
+        print("You lose. The word was:", secret_word)
