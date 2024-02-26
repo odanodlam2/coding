@@ -1,3 +1,5 @@
+import random
+
 secret_word = "skibidi"
 dashes = "-" * len(secret_word)
 
@@ -33,8 +35,8 @@ while guesses_left > 0:
     else:
         print("That letter is not in the word.")
         guesses_left -= 1 
-    if dashes == secret_word:
+        if dashes == secret_word:
         print("Congratulations! You guessed the word:", secret_word)
         breaK
-        
-print("You lose. The word was:", secret_word)
+    elif guesses_left == 0:
+        print("You lose. The word was:", secret_word)
