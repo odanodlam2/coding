@@ -1,10 +1,12 @@
 def validate_tweet(file_name):
     file = open(file_name, 'r')
     tweet = file.read()
-    if len(tweet) >= 280 or len(tweet) <= 1:
+    
+    if len(tweet) > 280 or len(tweet) == 0:
         return 'Invalid Tweet'
     elif tweet != tweet.strip():
         return  'Invalid Tweet'
+           
     file.close()
     return "Valid Tweet"
 
