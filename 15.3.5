@@ -1,0 +1,11 @@
+file = open("story.txt")
+number = 0
+
+words = file.readlines()
+
+for word in words:
+    number += 1
+
+file.close()
+
+print(number)
