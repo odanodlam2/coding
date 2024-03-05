@@ -1,12 +1,11 @@
-file = open("numbers.txt")
+file = open("numbers.txt", "r")
+total_sum = 0
 
-words = file.readlines()
+line = file.readline()
+while line:
+    total_sum += int(line)
+    line = file.readline()
 
-numbers = []
-
-for word in words:
-    numbers.append(int(word))
-    
-print(sum(numbers))
+print(total_sum)
 
 file.close()
