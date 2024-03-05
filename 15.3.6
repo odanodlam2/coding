@@ -1,0 +1,11 @@
+file = open("numbers.txt", "r")
+total_sum = 0
+
+line = file.readline()
+while line:
+    total_sum += int(line)
+    line = file.readline()
+
+print(total_sum)
+
+file.close()
