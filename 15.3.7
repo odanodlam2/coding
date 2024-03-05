@@ -1,0 +1,9 @@
+file = open("movies.txt", "r")
+
+line = file.readline()
+while line:
+    title = line.strip().title()
+    print(f"Movie: {title}")
+    line = file.readline()
+
+file.close()
