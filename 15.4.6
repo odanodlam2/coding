@@ -1,0 +1,11 @@
+# Open the file in read mode
+file = open("quotes.txt", "r")
+
+# Read all lines from the file using readlines()
+lines = file.readlines()
+
+for line in lines:
+    print(line.split('"')[1])
+# Close the file
+file.close()
+
