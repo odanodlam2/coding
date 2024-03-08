@@ -1,0 +1,13 @@
+# Open the file in read mode
+file = open("haystack.txt", "r")
+
+# Read all lines from the file using readlines()
+lines = file.readlines()
+
+num = (int(round(len(lines)/2)))
+
+print(lines[num])
+
+# Close the file
+file.close()
+
