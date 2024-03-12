@@ -3,6 +3,6 @@ file = open("quotes.txt", "r")
 lines = file.readlines()
 
 for line in lines:
-    print(line.split(' - ')[0])
+    print(line.split('"')[1])
 
 file.close()
