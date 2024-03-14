@@ -1,0 +1,9 @@
+with open('numbers.txt', 'r') as file:
+    lines = file.readlines() 
+
+middle_index = round(len(lines)/2)
+
+for line in lines[middle_index:]:
+    print(line.strip())  
+    
+file.close()
