@@ -1,14 +1,12 @@
 with open('story.txt', 'r') as original_file:
-    original_file.seek(0, 2)
-    cursor_position = original_file.tell()
-
     with open('reversed.txt', 'w') as reversed_file:
-        while cursor_position > 0:
-            cursor_position -= 1
-            original_file.seek(cursor_position)
-            char = original_file.read(1)
+        original_file.seek(0, 2)  
+        position = original_file.tell()  
 
-            reversed_file.write(char[::-1])
+        while position > 0:
+            position -= 1
+            original_file.seek(position)  
+            char = original_file.read(1)  
 
+            reversed_file.write(char)  
 original_file.close()
-reversed_file.close()
