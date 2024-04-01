@@ -1,0 +1,9 @@
+txt = Text("Name")
+txt.set_position(50, 200)
+txt.set_color(Color.cyan)
+txt.set_font("30pt Futura")
+add(txt)
+
+line = Line(50, 225, 150, 225)
+line.set_color("#FCBC1C")
+add(line)
