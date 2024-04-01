@@ -1,0 +1,23 @@
+width = get_width()
+height = get_height()
+
+# Set canvas size
+set_size(width, height)
+
+set_size(250, 250)
+
+# Set the starting position for the letter
+x = 100
+y = 100
+
+# Draw the top line
+add(Line(x, y, x + 50, y))
+
+# Draw the left line
+add(Line(x, y, x, y + 120))
+
+# Draw the bottom line
+add(Line(x, y + 120, x + 50, y + 120)) 
+
+# Draw the right line
+add(Line(x + 50, y, x + 50, y + 120))
