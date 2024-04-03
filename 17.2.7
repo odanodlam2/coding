@@ -1,0 +1,23 @@
+#Set the base blue color, and the frame size
+set_size(300,200)
+base=Rectangle(300,200)
+base.set_color(Color.blue)
+add(base)
+# Add outer white lines
+vline=Rectangle(50,200)
+vline.set_color(Color.white)
+vline.set_position(75,0)
+add(vline)
+hline=Rectangle(300,50)
+hline.set_color(Color.white)
+hline.set_position(0,75)
+add(hline)
+# Add inner red lines
+v_inner=Rectangle(30,200)
+v_inner.set_color(Color.red)
+v_inner.set_position(84,0)
+add(v_inner)
+h_inner=Rectangle(300,30)
+h_inner.set_color(Color.red)
+h_inner.set_position(0,84)
+add(h_inner)
