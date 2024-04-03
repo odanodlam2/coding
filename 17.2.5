@@ -1,0 +1,26 @@
+# Constant Values
+blue = "#0057B8"
+white = "#FFFFFF"
+red = "#EF4135"
+canvas_height = 300
+canvas_width = 400
+
+set_size(canvas_width, canvas_height)
+
+# Blue Rectangle
+blue_rectangle = Rectangle(canvas_width/3, canvas_height)
+blue_rectangle.set_color(blue)
+blue_rectangle.set_position(0, 0)
+add(blue_rectangle)
+
+# White Rectangle
+white_rectangle = Rectangle(canvas_width/3, canvas_height)
+white_rectangle.set_color(white)
+white_rectangle.set_position(canvas_width/3, 0)
+add(white_rectangle)
+
+# Red Rectangle
+red_rectangle = Rectangle(canvas_width/3, canvas_height)
+red_rectangle.set_color(red)
+red_rectangle.set_position(2*canvas_width/3, 0)
+add(red_rectangle)
