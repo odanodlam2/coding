@@ -1,0 +1,91 @@
+# Constant Values
+green = "#009543"
+white = "#FFFFFF"
+red = "#EF4135"
+canvas_height = 300
+canvas_width = 450
+
+set_size(canvas_width, canvas_height)
+
+# White Rectangle
+white_rectangle = Rectangle(canvas_width, canvas_height)
+white_rectangle.set_color(white)
+white_rectangle.set_position(0, 0)
+add(white_rectangle)
+
+# Red Cross
+red_cross_width = 40
+red_cross_height = canvas_height 
+red_cross = Rectangle(red_cross_width, red_cross_height)
+red_cross.set_color(red)
+red_cross.set_position(canvas_width / 2 - red_cross_width/2, 0)
+add(red_cross)
+
+# Red Cross
+red_cross_width = 40
+red_cross_height = canvas_height 
+red_cross = Rectangle(red_cross_height*2, red_cross_width)
+red_cross.set_color(red)
+red_cross.set_position(0, red_cross_height/2 - red_cross_width/2)
+add(red_cross)
+
+
+
+
+# Red Cross
+red_cross_width = 10
+red_cross_height = canvas_height/4
+red_cross = Rectangle(red_cross_width, red_cross_height)
+red_cross.set_color(red)
+red_cross.set_position(canvas_width / 4 - red_cross_width, canvas_width / 16)
+add(red_cross)
+
+red_cross_width = 10
+red_cross_height = canvas_height/4
+red_cross = Rectangle(red_cross_width, red_cross_height)
+red_cross.set_color(red)
+red_cross.set_position(canvas_width * (3/4) + red_cross_width, canvas_width/16)
+add(red_cross)
+
+# Red Cross
+red_cross_width = 10
+red_cross_height = canvas_height/4
+red_cross = Rectangle(red_cross_width, red_cross_height)
+red_cross.set_color(red)
+red_cross.set_position(canvas_width / 4 - red_cross_width, canvas_width*(7/16))
+add(red_cross)
+
+red_cross_width = 10
+red_cross_height = canvas_height/4
+red_cross = Rectangle(red_cross_width, red_cross_height)
+red_cross.set_color(red)
+red_cross.set_position(canvas_width * (3/4) + red_cross_width, canvas_width*(7/16))
+add(red_cross)
+
+red_cross_width = 10
+red_cross_height = canvas_height/4
+red_cross = Rectangle(red_cross_height, red_cross_width)
+red_cross.set_color(red)
+red_cross.set_position(canvas_width * (3/4) + red_cross_width-33, canvas_width*(7/16)+30)
+add(red_cross)
+
+red_cross_width = 10
+red_cross_height = canvas_height/4
+red_cross = Rectangle(red_cross_height, red_cross_width)
+red_cross.set_color(red)
+red_cross.set_position(canvas_width * (1/4) + red_cross_width-53, canvas_width*(7/16)+30)
+add(red_cross)
+
+red_cross_width = 10
+red_cross_height = canvas_height/4
+red_cross = Rectangle(red_cross_height, red_cross_width)
+red_cross.set_color(red)
+red_cross.set_position(canvas_width * (3/4) + red_cross_width-33, canvas_width/8+3)
+add(red_cross)
+
+red_cross_width = 10
+red_cross_height = canvas_height/4
+red_cross = Rectangle(red_cross_height, red_cross_width)
+red_cross.set_color(red)
+red_cross.set_position(canvas_width * (1/4) + red_cross_width-53, canvas_width/8+2)
+add(red_cross)
