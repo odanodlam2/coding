@@ -1,0 +1,14 @@
+set_size(400, 300)
+
+background = Rectangle(400, 300)
+background.set_color(Color.white)
+add(background)
+
+
+def vertical_line(x, length):
+    line = Line(x,0,x,length)
+    add(line)
+    
+vertical_line(100, 200);
+vertical_line(200, 100);    
+vertical_line(300, 50);
