@@ -1,0 +1,91 @@
+# Get the height and width of the canvas
+width = get_width()
+height = get_height()
+
+# Dimensions of each shape
+head_radius = width/6
+body_width = head_radius * 2
+body_height = height/6
+num_feet = 3
+foot_radius = body_width / (num_feet * 2)
+eye_radius = head_radius/4
+eye_offset = eye_radius * 1.5
+pupil_radius = eye_radius/2.5
+pupil_left_offset = eye_radius
+pupil_right_offset = pupil_radius * 5
+
+# Colors (These can be altered!)
+eye_color = Color.white
+pupil_color = Color.blue
+
+
+
+# Get the height and width of the canvas
+def draw_ghost(x, y, color):
+    width = 2*x
+    height = 2*y
+    
+    # Colors (These can be altered!)
+    body_color = color
+    eye_color = Color.white
+    pupil_color = Color.blue
+    
+    head = Circle(head_radius)
+    head.set_position(width/2, height/2)
+    head.set_color(body_color)
+    add(head)
+    
+    leg1 = Rectangle(foot_radius*2, body_height)
+    leg1.set_position(width/2-foot_radius,height/2)
+    leg1.set_color(body_color)
+    add(leg1)
+    
+    leg2 = Rectangle(foot_radius*2, body_height)
+    leg2.set_position(width/2+foot_radius,height/2)
+    leg2.set_color(body_color)
+    add(leg2)
+    
+    leg3 = Rectangle(foot_radius*2, body_height)
+    leg3.set_position(width/2-3*foot_radius,height/2)
+    leg3.set_color(body_color)
+    add(leg3)
+    
+    foot1 = Circle(foot_radius)
+    foot1.set_position(width/2-foot_radius*2, height/2+body_height)
+    foot1.set_color(body_color)
+    add(foot1)
+    
+    foot2 = Circle(foot_radius)
+    foot2.set_position(width/2, height/2+body_height)
+    foot2.set_color(body_color)
+    add(foot2)
+    
+    foot3 = Circle(foot_radius)
+    foot3.set_position(width/2+2*foot_radius, height/2+body_height)
+    foot3.set_color(body_color)
+    add(foot3)
+    
+    eye1 = Circle(eye_radius)
+    eye1.set_position(width/2-eye_offset, height/2)
+    eye1.set_color(eye_color)
+    add(eye1)
+    
+    eye2 = Circle(eye_radius)
+    eye2.set_position(width/2+eye_offset, height/2)
+    eye2.set_color(eye_color)
+    add(eye2)
+    
+    pupil1 = Circle(pupil_radius)
+    pupil1.set_position(width/2-pupil_left_offset, height/2)
+    pupil1.set_color(pupil_color)
+    add(pupil1)
+    
+    pupil2 = Circle(pupil_radius)
+    pupil2.set_position(width/2+pupil_right_offset, height/2)
+    pupil2.set_color(pupil_color)
+    add(pupil2)
+    
+draw_ghost(200, 200, Color.purple)
+draw_ghost(150, 300, Color.orange)
+draw_ghost(100, 100, Color.cyan)
+draw_ghost(300, 350, "#FE7F9C")
