@@ -1,0 +1,9 @@
+height = get_height()
+width = get_width()
+num_circles = 15
+radius = width/num_circles/2 # fill in this value based on number of circles
+
+for i in range(num_circles):
+    circle = Circle(radius)
+    circle.set_position(radius*2*i+radius,height/2)
+    add(circle)
