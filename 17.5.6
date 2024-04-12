@@ -1,0 +1,36 @@
+# Constant values
+width = get_width()
+height = get_height()
+separation = 10 # Spacing between blocks and on sides of canvas
+
+# 8 blocks on each side of canvas
+block_height = (height - separation * 9) / 8
+block_width = (width - separation * 9) / 8
+
+#top
+for i in range(8):
+    square = Rectangle(block_width, block_height)
+    square.set_position(separation+i*(block_width+separation), separation)
+    add(square)
+    
+#bottom
+for i in range(8):
+    square = Rectangle(block_width, block_height)
+    square.set_position(separation+i*(block_width+separation), height-separation-block_height)
+    add(square)
+    
+    
+#right
+for i in range(8):
+    square = Rectangle(block_width, block_height)
+    square.set_position(width-separation-block_width, separation+i*(block_height+separation))
+    add(square)
+    
+#left
+for i in range(8):
+    square = Rectangle(block_width, block_height)
+    square.set_position(separation, separation+i*(block_height+separation))
+    add(square)
+
+
+
