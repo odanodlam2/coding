@@ -1,0 +1,14 @@
+set_size(400, 400)
+
+# Constant values
+canvas_width= get_width()
+canvas_height= get_height()
+row_height= 50
+individual_block_width = 50
+
+amount = 8
+
+for i in range(amount, 0, -1):
+    block = Rectangle(individual_block_width*i, row_height)
+    block.set_position((canvas_width-individual_block_width*i)/2,(canvas_height - (row_height*amount)) + row_height*(i-1))
+    add(block)
