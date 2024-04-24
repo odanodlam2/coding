@@ -43,8 +43,6 @@ txt = Text("Click to start")
 txt.set_position(width/2-50, height/2+25)
 add(txt)
 
-
-
 def start_game(x, y):
     remove(txt)
     
@@ -53,7 +51,6 @@ def start_game(x, y):
     add(horizontal_border1)
     add(horizontal_border2)
     add(my_block)
-    print("hlello")
     
     title = Text("Moving blocks")
     title.set_position(width/2-50, 25)
