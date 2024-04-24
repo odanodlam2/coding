@@ -28,7 +28,7 @@ paddle_left.set_color(Color.green)
 
 paddle_right =  Rectangle(paddle_width, -paddle_height)
 paddle_right.set_position(width - border_width-paddle_width-5, (height+paddle_height)/2)
-paddle_right.set_color(Color.red)
+paddle_right.set_color(Color.blue)
 
 
 def move_block(event):
