@@ -53,7 +53,7 @@ def start_game(x, y):
     add(my_block)
     
     title = Text("Moving blocks")
-    title.set_position(width/2-50, 25)
+    title.set_position(width/2-70, height/2+5)
     title.set_color(Color.red)
     add(title)
     
